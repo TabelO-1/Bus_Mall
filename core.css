@@ -1,0 +1,19 @@
+main > h1 {
+  height: 100px;
+  background-color: darkblue;
+  color: whitesmoke;
+}
+main > div {
+  width: 300px;
+  height: auto;
+  border-radius: 5%;
+  background-color: #A0522D;
+  color: whitesmoke;
+}
+
+.centerWords {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
