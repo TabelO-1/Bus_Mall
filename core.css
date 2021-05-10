@@ -1,15 +1,65 @@
-main > h1 {
+html, body {
+  height: 100%
+}
+
+body > * {
+  border:1px solid #000;
+}
+
+body > header, body > footer {
+  background: indigo;
+  color: #eee;
   height: 100px;
-  background-color: darkblue;
-  color: whitesmoke;
+  line-height: 70px;
+  text-align: center;
 }
-main > div {
-  width: 300px;
-  height: auto;
+
+main {
+  background-color: antiquewhite;
+}
+
+main > .content {
+  background-color: antiquewhite;
+}
+
+main > .content > main > #votingResults {
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: chocolate;
+    border: 2px solid brown;
+    border-radius: 5%;
+    height: auto;
+    width: 250px;
+}
+main > .content > main > div {
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: darkorchid;
+  border: 2px solid purple;
   border-radius: 5%;
-  background-color: #A0522D;
-  color: whitesmoke;
+  height: 250px;
+  width: 300px;
 }
+
+main > aside {
+  color: whitesmoke;
+  background: darkmagenta;
+  height: 100%
+}
+
+main > nav {
+  color: whitesmoke;
+  background: darkmagenta;
+  height: 100%
+}
+.deck {
+  background: #0fa0ce;
+}
+
+.deck:first-child {
+  border-bottom: 1px solid black
+}
+
 
 .centerWords {
   display: flex;
