@@ -7,7 +7,7 @@ body > * {
 }
 
 body > header, body > footer {
-  background: indigo;
+  background: #791ee1;
   color: #eee;
   height: 100px;
   line-height: 70px;
@@ -25,8 +25,8 @@ main > .content {
 main > .content > main > #votingResults {
     font-weight: bold;
     color: whitesmoke;
-    background-color: chocolate;
-    border: 2px solid brown;
+    background-color: darkorchid;
+    border: 2px solid purple;
     border-radius: 5%;
     height: auto;
     width: 250px;
@@ -34,23 +34,26 @@ main > .content > main > #votingResults {
 main > .content > main > div {
   font-weight: bold;
   color: whitesmoke;
-  background-color: darkorchid;
-  border: 2px solid purple;
+  background-color: #1e24e1;
+  border: 2px solid darkblue;
   border-radius: 5%;
   height: 225px;
   width: 250px;
-  margin: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
 }
 
 main > aside {
   color: whitesmoke;
-  background: darkmagenta;
+  background: #da1ee1;
   height: 100%
 }
 
 main > nav {
   color: whitesmoke;
-  background: darkmagenta;
+  background: #da1ee1;
   height: 100%
 }
 .deck {
