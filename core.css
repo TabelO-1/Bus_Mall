@@ -30,6 +30,14 @@ main > .content > main > #votingResults {
     border-radius: 5%;
     height: auto;
     width: 250px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+main > .content > main > #leftImg {
+  margin-left: 25px;
+}
+main > .content > main > #rightImg {
+  margin-right: 25px;
 }
 main > .content > main > div {
   font-weight: bold;
