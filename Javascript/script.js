@@ -1,17 +1,9 @@
 'use strict';
 console.log('hello world');
 // 3. Actually Code (what code do we write) - Easy Part*/
-let imageArray = ['./Images/0.png', './Images/1.png', './Images/2.png', './Images/3.png','./Images/4.png', 
-'./Images/5.png', './Images/6.png', './Images/7.png', './Images/8.png', './Images/9.png', './Images/10.png', 
-'./Images/11.png', './Images/12.png', './Images/13.png', './Images/14.png',  './Images/15.png', './Images/16.png', 
-'./Images/17.png', './Images/18.png', './Images/19.png',  './Images/20.png', './Images/21.png',  './Images/22.png', 
-'./Images/23.png', './Images/24.png', ]
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
-  console.log(imageArray[getRandomInt(25)]);
-  console.log(imageArray[getRandomInt(25)]);
-  console.log(imageArray[getRandomInt(25)]);
 
 let leftImg = document.getElementById('leftImg');
 let centerImg = document.getElementById('centerImg');
@@ -22,18 +14,41 @@ let rightImg = document.getElementById('rightImg');
   rightImg.addEventListener('click', rightimg);
   
 function leftimg() {
-  var left = new NewImage('leftImg')
-  left.render
+  console.log('The Left Image was clicked')
 }
 function centerimg() {
-  var center = new NewImage('centerImg')
-  center.render
+  console.log('The Center Image was clicked')
 }
 function rightimg() {
-  var right = new NewImage('rightImg')
-  right.render
+  console.log('The Right Image was clicked')
 }
-function NewImage(imgName) {
-  this.name = imgName
-  console.log(this.name + 'was clicked')
+
+let PRODUCTS_ARRAY = [
+  {HTMLid : 'bag', imgURL : '../Images/bag.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'bannana', imgURL : '../Images/bannana.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'bathroom', imgURL : '../Images/bathroom.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'boots', imgURL : '../Images/boots.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'breakfast', imgURL : '../Images/breakfast.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'bubblegum', imgURL : '../Images/bubblegum.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'chair', imgURL : '../Images/chair.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'cthulhu', imgURL : '../Images/cthulhu.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'dog-duck', imgURL : '../Images/dog-duck.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'dragon', imgURL : '../Images/dragon.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'pen', imgURL : '../Images/pen.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'pet-sweep', imgURL : '../Images/pet-sweep.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'scissors', imgURL : '../Images/scissors.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'shark', imgURL : '../Images/shark.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'sweep', imgURL : '../Images/sweep.png', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'tauntaun', imgURL : '../Images/tauntaun.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'unicorn', imgURL : '../Images/unicorn.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'water-can', imgURL : '../Images/water-can.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'wine-glass', imgURL : '../Images/wine-glass.jpg', totalViews : 0, totalVotes : 0},
+]
+
+function handleClick() {
+  console.log('An Image Was Clicked')
+}
+
+function RenderImages() {
+  //this function will render 3 images from the array
 }
