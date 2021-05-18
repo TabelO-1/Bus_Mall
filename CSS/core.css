@@ -22,24 +22,20 @@ main > .content {
   background-color: antiquewhite;
 }
 
-main > .content > main > #votingResults {
-    font-weight: bold;
-    color: whitesmoke;
-    background-color: darkorchid;
-    border: 2px solid purple;
-    border-radius: 5%;
-    height: auto;
-    width: 250px;
-    margin-left: 25px;
-    margin-bottom: 25px;
+main > .content > main > section > #Img0Container {
+  order: 1;
+  margin-left: 75px;
+  margin-right: 50px;
 }
-main > .content > main > #leftImg {
-  margin-left: 25px;
+main > .content > main > section > #Img1Container {
+  order: 2;
 }
-main > .content > main > #rightImg {
+main > .content > main > section > #Img2Container {
+  order: 3;
   margin-right: 25px;
+  margin-left: 50px;
 }
-main > .content > main > div {
+main > .content > main > section > div {
   font-weight: bold;
   color: whitesmoke;
   background-color: #1e24e1;

@@ -1,27 +1,9 @@
-'use strict';
+'use strict'
 console.log('hello world');
-// 3. Actually Code (what code do we write) - Easy Part*/
+// 3. Actually Code (what code do we write) - Easy Part
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
-
-let leftImg = document.getElementById('leftImg');
-let centerImg = document.getElementById('centerImg');
-let rightImg = document.getElementById('rightImg');
-
-  leftImg.addEventListener('click', leftimg);
-  centerImg.addEventListener('click', centerimg);
-  rightImg.addEventListener('click', rightimg);
-  
-function leftimg() {
-  console.log('The Left Image was clicked')
-}
-function centerimg() {
-  console.log('The Center Image was clicked')
-}
-function rightimg() {
-  console.log('The Right Image was clicked')
-}
 
 let PRODUCTS_ARRAY = [
   {HTMLid : 'bag', imgURL : '../Images/bag.jpg', totalViews : 0, totalVotes : 0},
@@ -50,5 +32,17 @@ function handleClick() {
 }
 
 function RenderImages() {
-  //this function will render 3 images from the array
+  /*this function will render 3 images from the array
+  Grab the html item to attach the 3 images to
+   1. Get the Element from html that we want to attach the image to
+   2. create a image(img) element
+   3. set the src(source) property of the img element to the imageURL property
+   4. append the newly created img to the div element(appendChild)
+
+   = Loop through the PRODUCTS_ARRAY to "get" the first 3 images*/
+  for (let i=0; i <= 2; i++) {
+    let imageContainer = document.getElementById(`Img${i}Container`);
+    let img = document.createElement('img');
+    img.setAttribute('src', PRODUCTS_ARRAY[i].imgURL);
+  }
 }

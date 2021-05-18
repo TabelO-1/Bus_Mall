@@ -20,3 +20,8 @@ main {
   main > aside {
     order: 3;
   }
+  main > .content > main > section {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
