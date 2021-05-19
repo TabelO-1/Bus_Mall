@@ -4,10 +4,10 @@ console.log('hello world');
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
-
+  
 let PRODUCTS_ARRAY = [
   {HTMLid : 'bag', imgURL : '../Images/bag.jpg', totalViews : 0, totalVotes : 0},
-  {HTMLid : 'bannana', imgURL : '../Images/bannana.jpg', totalViews : 0, totalVotes : 0},
+  {HTMLid : 'banana', imgURL : '../Images/banana.jpg', totalViews : 0, totalVotes : 0},
   {HTMLid : 'bathroom', imgURL : '../Images/bathroom.jpg', totalViews : 0, totalVotes : 0},
   {HTMLid : 'boots', imgURL : '../Images/boots.jpg', totalViews : 0, totalVotes : 0},
   {HTMLid : 'breakfast', imgURL : '../Images/breakfast.jpg', totalViews : 0, totalVotes : 0},
@@ -26,10 +26,7 @@ let PRODUCTS_ARRAY = [
   {HTMLid : 'water-can', imgURL : '../Images/water-can.jpg', totalViews : 0, totalVotes : 0},
   {HTMLid : 'wine-glass', imgURL : '../Images/wine-glass.jpg', totalViews : 0, totalVotes : 0},
 ]
-
-function handleClick() {
-  console.log('An Image Was Clicked')
-}
+let clicks = 0;
 
 function RenderImages() {
   /*this function will render 3 images from the array
@@ -39,10 +36,32 @@ function RenderImages() {
    3. set the src(source) property of the img element to the imageURL property
    4. append the newly created img to the div element(appendChild)
 
-   = Loop through the PRODUCTS_ARRAY to "get" the first 3 images*/
+   - Loop through the PRODUCTS_ARRAY to "get" the first 3 images*/
   for (let i=0; i <= 2; i++) {
     let imageContainer = document.getElementById(`Img${i}Container`);
     let img = document.createElement('img');
     img.setAttribute('src', PRODUCTS_ARRAY[i].imgURL);
+    img.setAttribute('id', PRODUCTS_ARRAY[i].HTMLid);
+    imageContainer.appendChild(img);
   }
 }
+function handleClick(event) {
+  clicks++;
+  console.log('Image ' + event.target.id + ' was clicked');
+  let parentId = event.target.id;
+  
+  if(PRODUCTS_ARRAY[0].HTMLid == parentId) {
+    console.log('um hope this works')
+  } else {
+    console.log('WRONG!')
+  }
+}
+
+(function startApp() {
+  console.log('This app was made by Mason W. May 2021, enjoy!');
+  for(let i=0; i < 3; i++) {
+    let listen = document.getElementById(`Img${i}Container`);
+    listen.addEventListener('click', handleClick);
+  }
+  RenderImages();
+})();
