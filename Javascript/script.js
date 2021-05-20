@@ -29,14 +29,6 @@ let PRODUCTS_ARRAY = [
 let clicks = 0;
 
 function RenderImages() {
-  /*this function will render 3 images from the array
-  Grab the html item to attach the 3 images to
-   1. Get the Element from html that we want to attach the image to
-   2. create a image(img) element
-   3. set the src(source) property of the img element to the imageURL property
-   4. append the newly created img to the div element(appendChild)
-
-   - Loop through the PRODUCTS_ARRAY to "get" the first 3 images*/
   for (let i=0; i <= 2; i++) {
     let imageContainer = document.getElementById(`Img${i}Container`);
     let img = document.createElement('img');
@@ -48,12 +40,13 @@ function RenderImages() {
 function handleClick(event) {
   clicks++;
   console.log('Image ' + event.target.id + ' was clicked');
-  let parentId = event.target.id;
+  let imageid = event.target.id;
   
-  if(PRODUCTS_ARRAY[0].HTMLid == parentId) {
-    console.log('um hope this works')
-  } else {
-    console.log('WRONG!')
+  for (let i=0; i < PRODUCTS_ARRAY.length; i++) {
+    if (imageid === PRODUCTS_ARRAY[i].HTMLid) {
+      PRODUCTS_ARRAY[i].totalVotes++
+      console.log('total votes ', PRODUCTS_ARRAY[i].totalVotes);
+    }
   }
 }
 
