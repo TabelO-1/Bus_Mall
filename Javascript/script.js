@@ -4,7 +4,6 @@ console.log('hello world');
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
-  var shuffle = getRandomInt(19);
   
 let PRODUCTS_ARRAY = [
   {HTMLid : 'bag', imgURL : '../Images/bag.jpg', totalViews : 0, totalVotes : 0},
@@ -30,6 +29,7 @@ let PRODUCTS_ARRAY = [
 let clicks = 0;
 
 function RenderImages() {
+  console.log('Total Clicks = ', clicks);
   for (let i=0; i <= 2; i++) {
     let imageContainer = document.getElementById(`Img${i}Container`);
     let img = document.createElement('img');
@@ -51,17 +51,25 @@ function handleClick(event) {
       console.log('total votes ', PRODUCTS_ARRAY[i].totalVotes);
     }
   }
-  for (let i=0; i <=2; i++) {
-    let removeItem = PRODUCTS_ARRAY.shift();
-    let addItem = PRODUCTS_ARRAY.push(removeItem);
-    console.log('Id: ', PRODUCTS_ARRAY[0].HTMLid);
-    console.log('Last Item: ', PRODUCTS_ARRAY[18].HTMLid);
+  if (clicks !== 25) {
+    for (let i=0; i <=2; i++) {
+      let shuffle = getRandomInt(PRODUCTS_ARRAY.length);
+      let removeItem = PRODUCTS_ARRAY.shift();
+      let addItem = PRODUCTS_ARRAY.splice(shuffle+4, 0, removeItem);
+    }
+    for (let i=0; i<3; i++) {
+      let parent = document.getElementById(`Img${i}Container`);
+      parent.removeChild(parent.lastChild);
+    }
+    RenderImages();
+  } else {
+    let divs = document.getElementsByTagName('div');
+    for (let i=1; i<divs.length - 1; i++) {
+      divs[i].removeEventListener('click', handleClick);
+    }
+    console.log('Thou hast reached 25 Clicks')
   }
-  for (let i=0; i<3; i++) {
-    let parent = document.getElementById(`Img${i}Container`);
-    parent.removeChild(parent.lastChild);
-  }
-  RenderImages();
+  
 }
 
 (function startApp() {
