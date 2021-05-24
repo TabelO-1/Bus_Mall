@@ -4,6 +4,7 @@ console.log('hello world');
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
+  var shuffle = getRandomInt(19);
   
 let PRODUCTS_ARRAY = [
   {HTMLid : 'bag', imgURL : '../Images/bag.jpg', totalViews : 0, totalVotes : 0},
@@ -35,6 +36,8 @@ function RenderImages() {
     img.setAttribute('src', PRODUCTS_ARRAY[i].imgURL);
     img.setAttribute('id', PRODUCTS_ARRAY[i].HTMLid);
     imageContainer.appendChild(img);
+    PRODUCTS_ARRAY[i].totalViews++;
+    console.log('total views: ', PRODUCTS_ARRAY[i].HTMLid, PRODUCTS_ARRAY[i].totalViews);
   }
 }
 function handleClick(event) {
@@ -48,6 +51,17 @@ function handleClick(event) {
       console.log('total votes ', PRODUCTS_ARRAY[i].totalVotes);
     }
   }
+  for (let i=0; i <=2; i++) {
+    let removeItem = PRODUCTS_ARRAY.shift();
+    let addItem = PRODUCTS_ARRAY.push(removeItem);
+    console.log('Id: ', PRODUCTS_ARRAY[0].HTMLid);
+    console.log('Last Item: ', PRODUCTS_ARRAY[18].HTMLid);
+  }
+  for (let i=0; i<3; i++) {
+    let parent = document.getElementById(`Img${i}Container`);
+    parent.removeChild(parent.lastChild);
+  }
+  RenderImages();
 }
 
 (function startApp() {
