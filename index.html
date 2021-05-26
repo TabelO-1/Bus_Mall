@@ -1,51 +1,74 @@
+<!-- Html copied from Calvin Cheng -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bus Mall</title>
+  <title>HS Busmall</title>
   <link rel="stylesheet" href="./CSS/core.css">
-  <link rel="stylesheet" href="./CSS/grid.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-  <header class="centerWords">
-    <h1>Bus Mall</h1>
-  </header>
+      <header class="centerWords">
+        <h1>High School Bus Mall</h1>
+      </header>
 
-  <main>
-    <nav class="centerWords">
-      <strong>Navigation</strong>
-    </nav>
-
-    <aside class="centerWords">
-      <img src="https://via.placeholder.com/200" alt="200px ad">
-      <img src="https://via.placeholder.com/200" alt="200px ad">
-      <img src="https://via.placeholder.com/200" alt="200px ad">
-    </aside>
-
-    <div class="content">
       <main>
-        <section class="centerWords" id="imgContainer">
-        <div class="centerWords" id="Img0Container"></div>
-        <div class="centerWords" id="Img1Container"></div>
-        <div class="centerWords" id="Img2Container"></div>
-        </section>
-      <!-- <div>
-        <canvas id="myChart"></canvas>
-      </div> -->
+        <nav class="navAlign">
+          
+          <ul>
+            <li><a href="./pages/about.html">About HS Busmall</a></li>
+            <li><a href="https://github.com/calvincheng919/hs_busmall.git">HS Busmall Repo</a></li>
+            <li><a href="http://google.com">Google Search</a></li>
+            <li><a href="https://uneedahat.com">You Need a Hat</a></li>
+            <li><a href="https://github.com/calvincheng919/HS_Salmon_Cookies_Reference.git">Salmon Cookies</a></li>
+          </ul>
+
+        </nav>
+
+        <aside class="centerWords">
+          <ul>
+            <li>Ad Link 1</li>
+            <li>Ad Link  2</li>
+            <li>Ad Link  3</li>
+            <li>Ad Link  4</li>
+            <li>Ad Link  5</li>
+          </ul>
+
+        </aside>
+
+        <div class="content">
+          <section class="deck">
+
+            <div id="img0Container" class="imgCards"></div>
+            <div id="img1Container" class="imgCards"></div>
+            <div id="img2Container" class="imgCards"></div>
+
+            
+          </section>
+
+          <section class="deck">
+
+            <section id="resultSection"></section>
+            <div class="imgCards chart" id="graph"></div>
+          </section>
+
+        </div>
+
+
       </main>
-    </div>
-  </main>
 
   <footer class="centerWords">
 
-  <strong>&copy;MJ 2021</strong>
+  &copy;Mason Whitaker 2021
 
   </footer>
-
+  
 </body>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
 <script src="./Javascript/script.js"></script>
 </html>

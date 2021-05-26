@@ -1,81 +1,95 @@
+/* CSS copied from Calvin Cheng */
+
 html, body {
-  height: 100%
+  height: 100%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  
 }
 
 body > * {
-  border:1px solid #000;
+  border:3px solid darkblue;
 }
 
 body > header, body > footer {
   background: #791ee1;
   color: #eee;
-  height: 100px;
-  line-height: 70px;
-  text-align: center;
+  height: 70px;
+  line-height:70px;
+  text-align:center;
 }
 
 main {
-  background-color: antiquewhite;
+  background: antiquewhite;
 }
 
 main > .content {
-  background-color: antiquewhite;
-}
-
-main > .content > main > section > #Img0Container {
-  order: 1;
-  margin-left: 75px;
-  margin-right: 50px;
-}
-main > .content > main > section > #Img1Container {
-  order: 2;
-}
-main > .content > main > section > #Img2Container {
-  order: 3;
-  margin-right: 25px;
-  margin-left: 50px;
-}
-main > .content > main > section > div {
-  font-weight: bold;
-  color: whitesmoke;
-  background-color: #1e24e1;
-  border: 2px solid darkblue;
-  border-radius: 5%;
-  height: 225px;
-  width: 250px;
-  margin-bottom: auto;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 25px;
-}
-main > .content > main > section > div > img {
-  height: 200px;
-  width: 200px;
+  background: antiquewhite;
 }
 
 main > aside {
   color: whitesmoke;
   background: #da1ee1;
-  height: 100%
+  height: 100%;
 }
 
 main > nav {
   color: whitesmoke;
   background: #da1ee1;
-  height: 100%
+  height: 100%;
+  font-size: 1.25em;
 }
+
+aside > ul {
+  list-style-type: none;
+}
+nav > ul {
+  list-style-type: none;
+}
+
 .deck {
-  background: #0fa0ce;
+  background: antiquewhite;
 }
-
-.deck:first-child {
-  border-bottom: 1px solid black
-}
-
 
 .centerWords {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.navAlign {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
+  background: #da1ee1;
+}
+
+
+a:link {
+  color: antiquewhite;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: antiquewhite;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: antiquewhite;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: antiquewhite;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+ul {
+  line-height: 250%
 }
